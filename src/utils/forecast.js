@@ -14,7 +14,9 @@ const forecast = (long, lat, callback) => {
           body.currently.temperature
         } degrees out. There is a ${
           body.currently.precipProbability
-        } % chance of rain.`
+        } % chance of rain. The min temp is ${
+          body.daily.data[0].temperatureLow
+        } and the max is ${body.daily.data[0].temperatureHigh} `
       );
     }
   });
